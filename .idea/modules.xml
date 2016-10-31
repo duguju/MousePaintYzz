@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MousePaint-master.iml" filepath="$PROJECT_DIR$/MousePaint-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MousePaintYzz.iml" filepath="$PROJECT_DIR$/MousePaintYzz.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewSelectorLibrary/ViewSelectorLibrary.iml" filepath="$PROJECT_DIR$/ViewSelectorLibrary/ViewSelectorLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/animator/animator.iml" filepath="$PROJECT_DIR$/animator/animator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
