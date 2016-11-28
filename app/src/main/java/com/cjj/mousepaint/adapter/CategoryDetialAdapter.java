@@ -1,6 +1,7 @@
 package com.cjj.mousepaint.adapter;
 
 import android.app.Activity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -55,9 +56,24 @@ public class CategoryDetialAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        mHolder = new ViewHolder();
-        convertView = ViewHolderUtils.loadingConvertView(parent.getContext(), convertView, R.layout.item_category_detial, ViewHolder.class);
-        mHolder = (ViewHolder) convertView.getTag();
+
+        if( convertView == null )
+        {
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_category_detial,null);
+            mHolder = new ViewHolder();
+            mHolder.tv_comic_title = (TextView) convertView.findViewById(R.id.tv_comic_title);
+            mHolder.tv_comic_intro = (TextView) convertView.findViewById(R.id.tv_comic_intro);
+            mHolder.tv_num_last = (TextView) convertView.findViewById(R.id.tv_num_last);
+            mHolder.tv_comic_status = (TextView) convertView.findViewById(R.id.tv_comic_status);
+            mHolder.iv_zone_item = (ImageView) convertView.findViewById(R.id.iv_zone_item);
+            convertView.setTag(mHolder);
+        }
+        else
+            mHolder = (ViewHolder) convertView.getTag();
+
+//        mHolder = new ViewHolder();
+//        convertView = ViewHolderUtils.loadingConvertView(parent.getContext(), convertView, R.layout.item_category_detial, ViewHolder.class);
+//        mHolder = (ViewHolder) convertView.getTag();
         mHolder.tv_comic_title.setText(list.get(position).Title);
         mHolder.tv_comic_intro.setText(list.get(position).Explain);
         mHolder.tv_num_last.setText(list.get(position).Author);
